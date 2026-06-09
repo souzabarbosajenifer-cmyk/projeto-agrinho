@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoProdutor - Diagnóstico Sustentável</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="quiz-container">
+        <h2>EcoProdutor: Avalie sua Sustentabilidade</h2>
+        <p>Responda às perguntas abaixo para descobrir o nível de equilíbrio da sua propriedade.</p>
+        <hr>
+
+        <form id="quizForm">
+            <div class="question">
+                <p><strong>1. Como é feita a irrigação na sua propriedade?</strong></p>
+                <label>
+                    <input type="radio" name="q1" value="0" required> Não monitoro, irrigo nos mesmos horários todos os dias.
+                </label><br>
+                <label>
+                    <input type="radio" name="q1" value="5"> Uso gotejamento ou técnicas que evitam o desperdício.
+                </label><br>
+                <label>
+                    <input type="radio" name="q1" value="10"> Tenho sensores de umidade no solo ou capto água da chuva.
+                </label>
+            </div>
+
+            <div class="question">
+                <p><strong>2. Qual é o destino das embalagens de defensivos/fertilizantes?</strong></p>
+                <label>
+                    <input type="radio" name="q2" value="0" required> Ficam guardadas no galpão ou são descartadas no lixo comum.
+                </label><br>
+                <label>
+                    <input type="radio" name="q2" value="10"> Realizo a tríplice lavagem e entrego nos postos de coleta oficial (Logística Reversa).
+                </label>
+            </div>
+
+            <div class="question">
+                <p><strong>3. A propriedade utiliza alguma fonte de energia renovável?</strong></p>
+                <label>
+                    <input type="radio" name="q3" value="0" required> Não, dependemos 100% da rede elétrica convencional.
+                </label><br>
+                <label>
+                    <input type="radio" name="q3" value="10"> Sim, utilizamos energia solar, biomassa ou biodiesel próprio.
+                </label>
+            </div>
+
+            <button type="button" onclick="calcularResultado()">Ver Diagnóstico</button>
+        </form>
+
+        <div id="resultado" class="result-box hidden">
+            <h3>Seu Resultado:</h3>
+            <p id="notaTexto"></p>
+            <p id="dicaTexto" style="font-style: italic; color: #555;"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
